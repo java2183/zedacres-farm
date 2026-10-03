@@ -939,6 +939,188 @@ h2 em {
   display: block;
 }
 
+.community-section {
+  background: var(--cream);
+}
+
+.community-grid {
+  display: grid;
+  grid-template-columns: .8fr 1.2fr;
+  gap: 9%;
+  align-items: center;
+}
+
+.community-copy h2 {
+  margin: 0 0 20px;
+  color: var(--forest);
+  font-family: var(--serif);
+  font-size: clamp(40px, 4.3vw, 55px);
+  font-weight: 400;
+  letter-spacing: -.045em;
+  line-height: 1.08;
+}
+
+.community-copy h2 em {
+  color: var(--leaf);
+}
+
+.community-copy > p:not(.eyebrow) {
+  max-width: 400px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.account-card {
+  padding: 25px;
+  border: 1px solid #17452f20;
+  border-radius: 5px;
+  background: white;
+  box-shadow: 0 16px 45px #10291c0c;
+}
+
+.account-demo-note {
+  padding: 12px 14px;
+  border-left: 3px solid var(--soil);
+  color: #4c4035;
+  background: var(--cream);
+  font-size: 11px;
+  line-height: 1.55;
+}
+
+.account-demo-note strong {
+  color: var(--forest);
+}
+
+.account-tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+  margin-block: 17px 20px;
+  padding: 4px;
+  border-radius: 4px;
+  background: #e7eee7;
+}
+
+.account-tab {
+  min-height: 42px;
+  padding-inline: 12px;
+  border: 0;
+  border-radius: 3px;
+  color: var(--muted);
+  background: transparent;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.account-tab.is-active {
+  color: white;
+  background: var(--forest);
+}
+
+.account-panel h3 {
+  margin: 0;
+  color: var(--forest);
+  font-family: var(--serif);
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.account-panel-intro {
+  margin: 5px 0 16px;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.account-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 7px;
+}
+
+.account-form label {
+  margin-top: 4px;
+  color: var(--ink);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.account-form label span {
+  color: var(--soil);
+  font-weight: 500;
+}
+
+.account-form input,
+.account-form select {
+  width: 100%;
+  min-height: 43px;
+  padding: 9px 11px;
+  border: 1px solid #68766c75;
+  border-radius: 3px;
+  color: var(--ink);
+  background: white;
+  font: inherit;
+  font-size: 13px;
+}
+
+.account-form input:focus-visible,
+.account-form select:focus-visible {
+  outline: 3px solid var(--soil-light);
+  outline-offset: 1px;
+}
+
+.account-submit {
+  min-height: 46px;
+  margin-top: 9px;
+  padding-inline: 15px;
+  border: 0;
+  border-radius: 3px;
+  color: white;
+  background: var(--forest);
+  font: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.account-submit:hover {
+  background: #225a3b;
+}
+
+.account-submit:disabled {
+  opacity: .6;
+  cursor: not-allowed;
+}
+
+.account-status {
+  margin: 5px 0 0;
+  padding: 10px 12px;
+  border-radius: 3px;
+  color: var(--forest);
+  background: #e7eee7;
+  font-size: 11px;
+  line-height: 1.55;
+}
+
+.account-switch-copy {
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.account-switch {
+  padding: 4px;
+  border: 0;
+  color: var(--forest);
+  background: transparent;
+  font: inherit;
+  font-weight: 750;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  cursor: pointer;
+}
+
 .farm-assistant [hidden] {
   display: none !important;
 }
@@ -946,7 +1128,7 @@ h2 em {
 .assistant-launcher {
   position: fixed;
   z-index: 20;
-  right: 24px;
+  left: 24px;
   bottom: 24px;
   display: inline-flex;
   min-height: 56px;
@@ -990,7 +1172,7 @@ h2 em {
 .assistant-panel {
   position: fixed;
   z-index: 21;
-  right: 24px;
+  left: 24px;
   bottom: 94px;
   display: flex;
   width: min(390px, calc(100vw - 32px));
@@ -1115,6 +1297,30 @@ h2 em {
 .assistant-quiz-choices button:hover {
   border-color: var(--forest);
   background: #e7eee7;
+}
+
+.assistant-quiz-choices button:disabled {
+  color: var(--muted);
+  background: var(--cream);
+  cursor: default;
+}
+
+.assistant-whatsapp-link {
+  display: inline-flex;
+  min-height: 40px;
+  align-items: center;
+  margin-top: 9px;
+  padding: 7px 12px;
+  border-radius: 7px;
+  color: white;
+  background: var(--forest);
+  font-size: 11px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.assistant-whatsapp-link:hover {
+  background: #225a3b;
 }
 
 .assistant-form {
@@ -1290,6 +1496,10 @@ h2 em {
   .contact-panel {
     gap: 8%;
     padding-inline: 6%;
+  }
+
+  .community-grid {
+    gap: 32px;
   }
 }
 
@@ -1520,6 +1730,19 @@ h2 em {
     padding: 39px 25px;
   }
 
+  .community-grid {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+
+  .community-copy h2 {
+    font-size: 43px;
+  }
+
+  .account-card {
+    padding: 18px;
+  }
+
   .contact-copy h2 {
     font-size: 42px;
   }
@@ -1543,14 +1766,14 @@ h2 em {
   }
 
   .assistant-launcher {
-    right: 16px;
+    left: 16px;
     bottom: 16px;
     min-height: 52px;
     padding-inline: 13px;
   }
 
   .assistant-panel {
-    right: 12px;
+    left: 12px;
     bottom: 78px;
     width: calc(100vw - 24px);
     max-height: min(560px, calc(100svh - 96px));
