@@ -397,7 +397,6 @@ function showAuthenticatedUser(session) {
 
 async function enableAccountService() {
   const config = window.ZEDACRES_AUTH_CONFIG;
-  const authForms = accountForms.filter((form) => form.dataset.accountMode);
   const hasConfig = typeof config?.url === "string"
     && typeof config?.anonKey === "string"
     && config.url.trim()
