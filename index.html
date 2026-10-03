@@ -11,6 +11,7 @@
     <title>Zedacres Farm | Growing knowledge, nurturing life</title>
     <link rel="preconnect" href="https://images.unsplash.com">
     <link rel="stylesheet" href="styles.css">
+    <script src="auth-config.js" defer></script>
     <script src="script.js" defer></script>
   </head>
   <body>
@@ -55,6 +56,7 @@
             </div>
           </div>
           <a class="nav-link" href="#training">Training</a>
+          <a class="nav-link" href="#community">Join Us</a>
           <a class="nav-link" href="#gallery">Gallery</a>
           <a class="nav-link nav-contact" href="#contact">Contact <span aria-hidden="true">↗</span></a>
         </nav>
@@ -346,6 +348,99 @@
         </div>
       </section>
 
+      <section class="community-section section-pad" id="community" aria-labelledby="community-title">
+        <div class="page-width community-grid">
+          <div class="community-copy">
+            <p class="eyebrow"><span></span> Grow your interest</p>
+            <h2 id="community-title">Stay curious.<br><em>Keep growing.</em></h2>
+            <p>Choose the parts of farming you would like to explore, from fish farming and crops to livestock and training.</p>
+            <p>Create an account to keep your farming interests together and sign in when you return.</p>
+          </div>
+          <div class="account-card">
+            <div class="account-service-note" id="account-service-status" role="status" aria-live="polite">
+              Checking secure account service…
+            </div>
+            <p class="account-privacy-note" id="account-privacy-note" hidden>
+              When enabled, account details are sent securely to the configured authentication provider. Do not reuse your password from another service.
+            </p>
+            <div class="account-tabs" role="group" aria-label="Choose sign-in or create an account" hidden>
+              <button
+                class="account-tab is-active"
+                type="button"
+                data-account-tab="login"
+                aria-controls="login-panel"
+                aria-pressed="true"
+              >Sign in</button>
+              <button
+                class="account-tab"
+                type="button"
+                data-account-tab="signup"
+                aria-controls="signup-panel"
+                aria-pressed="false"
+              >Create account</button>
+            </div>
+            <div class="account-session" id="account-session" hidden>
+                <h3>You're signed in</h3>
+                <p class="account-session-email" id="account-session-email"></p>
+                <p class="account-session-interest" id="account-session-interest" hidden></p>
+                <button class="account-submit" id="account-signout" type="button">Sign out</button>
+                <p class="account-status" id="account-session-status" role="status" aria-live="polite" hidden></p>
+            </div>
+            <section class="account-panel" id="login-panel" aria-labelledby="login-title" hidden>
+                <h3 id="login-title">Welcome back</h3>
+                <p class="account-panel-intro">Sign in to your farm community account.</p>
+                <form class="account-form" data-account-mode="login" autocomplete="on">
+                  <label for="login-email">Email address</label>
+                  <input id="login-email" name="email" type="email" autocomplete="username" required disabled>
+                  <label for="login-password">Password</label>
+                  <input id="login-password" name="password" type="password" autocomplete="current-password" required disabled>
+                  <button class="account-submit" type="submit" disabled>Sign in</button>
+                  <p class="account-status" role="status" aria-live="polite" hidden></p>
+                </form>
+                <button class="account-reset" id="account-reset-password" type="button" disabled>Forgot password?</button>
+                <p class="account-switch-copy">New to the farm community? <button class="account-switch" type="button" data-account-tab="signup">Create an account</button></p>
+            </section>
+            <section class="account-panel" id="signup-panel" aria-labelledby="signup-title" hidden>
+                <h3 id="signup-title">Find your farming interests</h3>
+                <p class="account-panel-intro">Create a secure account and choose a topic to explore.</p>
+                <form class="account-form" data-account-mode="signup" autocomplete="on">
+                  <label for="signup-name">Your name</label>
+                  <input id="signup-name" name="name" type="text" autocomplete="name" maxlength="80" required disabled>
+                  <label for="signup-email">Email address</label>
+                  <input id="signup-email" name="email" type="email" autocomplete="email" required disabled>
+                  <label for="signup-interest">Farming interest</label>
+                  <select id="signup-interest" name="interest" required disabled>
+                  <option value="">Choose a topic</option>
+                  <option value="fish-farming">Fish farming</option>
+                  <option value="crops">Crops</option>
+                  <option value="livestock">Livestock</option>
+                  <option value="training">Agricultural training</option>
+                </select>
+                <label for="signup-password">Password <span>At least 8 characters. Don't reuse another account's password.</span></label>
+                <input id="signup-password" name="password" type="password" autocomplete="new-password" minlength="8" required disabled>
+                <label for="signup-password-confirm">Confirm password</label>
+                <input id="signup-password-confirm" name="password-confirm" type="password" autocomplete="new-password" minlength="8" required disabled>
+                <button class="account-submit" type="submit" disabled>Create account</button>
+                <p class="account-status" role="status" aria-live="polite" hidden></p>
+              </form>
+              <p class="account-switch-copy">Already have an account? <button class="account-switch" type="button" data-account-tab="login">Sign in</button></p>
+            </section>
+            <section class="account-panel" id="recovery-panel" aria-labelledby="recovery-title" hidden>
+              <h3 id="recovery-title">Choose a new password</h3>
+              <p class="account-panel-intro">Set a new password for your account.</p>
+              <form class="account-form" id="recovery-form">
+                <label for="recovery-password">New password <span>At least 8 characters.</span></label>
+                <input id="recovery-password" name="password" type="password" autocomplete="new-password" minlength="8" required disabled>
+                <label for="recovery-password-confirm">Confirm new password</label>
+                <input id="recovery-password-confirm" name="password-confirm" type="password" autocomplete="new-password" minlength="8" required disabled>
+                <button class="account-submit" type="submit" disabled>Update password</button>
+                <p class="account-status" role="status" aria-live="polite" hidden></p>
+              </form>
+            </section>
+          </div>
+        </div>
+      </section>
+
       <section class="contact-section section-pad" id="contact" aria-labelledby="contact-title">
         <div class="page-width contact-panel">
           <div class="contact-copy">
@@ -393,5 +488,49 @@
         </span>
       </div>
     </footer>
+
+    <aside class="farm-assistant" aria-label="Zedacres farm demo assistant">
+      <section class="assistant-panel" id="assistant-panel" aria-labelledby="assistant-title" hidden>
+        <header class="assistant-header">
+          <div>
+            <p class="assistant-demo-label">DEMO · SCRIPTED REPLIES</p>
+            <h2 id="assistant-title">Ask Zedacres</h2>
+          </div>
+          <button class="assistant-close" type="button" aria-label="Close farm demo assistant">×</button>
+        </header>
+        <p class="assistant-disclaimer">A local demo, not a live AI service. Replies use information on this website.</p>
+        <div class="assistant-messages" role="log" aria-live="polite" aria-relevant="additions">
+          <div class="assistant-message assistant-message-bot">
+            <p>Welcome! Ask about the farm or training, or choose a little farm fun.</p>
+          </div>
+          <div class="assistant-suggestions" aria-label="Try a demo question">
+            <button type="button">What does the farm do?</button>
+            <button type="button">When is training?</button>
+            <button type="button">Start a 3-question farm quiz</button>
+            <button type="button">Tell me a farm fact</button>
+            <button type="button">Tell me a farm joke</button>
+            <button type="button">Prepare a WhatsApp training enquiry</button>
+          </div>
+        </div>
+        <form class="assistant-form">
+          <label class="visually-hidden" for="assistant-input">Ask about Zedacres Farm</label>
+          <input id="assistant-input" name="question" type="text" maxlength="240" autocomplete="off" placeholder="Ask a question…" required>
+          <button type="submit" aria-label="Send message">Send</button>
+        </form>
+      </section>
+      <button
+        class="assistant-launcher"
+        type="button"
+        aria-controls="assistant-panel"
+        aria-expanded="false"
+      >
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M4 5.75A2.75 2.75 0 0 1 6.75 3h10.5A2.75 2.75 0 0 1 20 5.75v7.5A2.75 2.75 0 0 1 17.25 16h-6.1l-4.4 3.2c-.5.37-1.2.01-1.2-.61V16.1A2.75 2.75 0 0 1 4 13.25v-7.5Z"/>
+          <path d="M8 8.5h8M8 11.5h5" />
+        </svg>
+        <span>Ask Zedacres</span>
+        <span class="assistant-launcher-badge">DEMO</span>
+      </button>
+    </aside>
   </body>
 </html>
