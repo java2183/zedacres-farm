@@ -978,17 +978,29 @@ h2 em {
   box-shadow: 0 16px 45px #10291c0c;
 }
 
-.account-demo-note {
-  padding: 12px 14px;
-  border-left: 3px solid var(--soil);
+.account-service-note,
+.account-privacy-note {
+  margin: 0;
+  padding: 11px 13px;
   color: #4c4035;
   background: var(--cream);
   font-size: 11px;
   line-height: 1.55;
 }
 
-.account-demo-note strong {
-  color: var(--forest);
+.account-service-note.is-error {
+  border-left: 3px solid #a2342c;
+  color: #81261f;
+}
+
+.account-service-note:not(.is-error) {
+  border-left: 3px solid var(--soil);
+}
+
+.account-privacy-note {
+  margin-top: 9px;
+  color: var(--muted);
+  background: #e7eee7;
 }
 
 .account-tabs {
@@ -1101,6 +1113,30 @@ h2 em {
   background: #e7eee7;
   font-size: 11px;
   line-height: 1.55;
+}
+
+.account-session {
+  padding-top: 20px;
+}
+
+.account-session h3 {
+  margin: 0;
+  color: var(--forest);
+  font-family: var(--serif);
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.account-session-email,
+.account-session-interest {
+  margin: 7px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+.account-session .account-submit {
+  width: 100%;
 }
 
 .account-switch-copy {
