@@ -393,5 +393,48 @@
         </span>
       </div>
     </footer>
+
+    <aside class="farm-assistant" aria-label="Zedacres farm demo assistant">
+      <section class="assistant-panel" id="assistant-panel" aria-labelledby="assistant-title" hidden>
+        <header class="assistant-header">
+          <div>
+            <p class="assistant-demo-label">DEMO · SCRIPTED REPLIES</p>
+            <h2 id="assistant-title">Ask Zedacres</h2>
+          </div>
+          <button class="assistant-close" type="button" aria-label="Close farm demo assistant">×</button>
+        </header>
+        <p class="assistant-disclaimer">A local demo, not a live AI service. Replies use information on this website.</p>
+        <div class="assistant-messages" role="log" aria-live="polite" aria-relevant="additions">
+          <div class="assistant-message assistant-message-bot">
+            <p>Welcome! Ask about the farm or training, or choose a little farm fun.</p>
+          </div>
+          <div class="assistant-suggestions" aria-label="Try a demo question">
+            <button type="button">What does the farm do?</button>
+            <button type="button">When is training?</button>
+            <button type="button">Give me a farm quiz</button>
+            <button type="button">Tell me a farm fact</button>
+            <button type="button">Tell me a farm joke</button>
+          </div>
+        </div>
+        <form class="assistant-form">
+          <label class="visually-hidden" for="assistant-input">Ask about Zedacres Farm</label>
+          <input id="assistant-input" name="question" type="text" maxlength="240" autocomplete="off" placeholder="Ask a question…" required>
+          <button type="submit" aria-label="Send message">Send</button>
+        </form>
+      </section>
+      <button
+        class="assistant-launcher"
+        type="button"
+        aria-controls="assistant-panel"
+        aria-expanded="false"
+      >
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M4 5.75A2.75 2.75 0 0 1 6.75 3h10.5A2.75 2.75 0 0 1 20 5.75v7.5A2.75 2.75 0 0 1 17.25 16h-6.1l-4.4 3.2c-.5.37-1.2.01-1.2-.61V16.1A2.75 2.75 0 0 1 4 13.25v-7.5Z"/>
+          <path d="M8 8.5h8M8 11.5h5" />
+        </svg>
+        <span>Ask Zedacres</span>
+        <span class="assistant-launcher-badge">DEMO</span>
+      </button>
+    </aside>
   </body>
 </html>
