@@ -19,3 +19,9 @@ A responsive public website for Zedacres Farm, built with plain HTML, CSS and Ja
 - Account forms send email/password to Supabase only when a valid HTTPS project URL and public key are configured. Without them, the controls remain disabled and the page says accounts are not configured. The page does not save passwords; Supabase Auth persists the signed-in session in the visitor's browser using its client SDK.
 
 The site has no build step. Supabase authentication requires an internet connection to load the Supabase JavaScript client and contact the configured project.
+
+## Deploy to Netlify
+
+This repository includes `netlify.toml` for a no-build static deployment. To publish it, sign in to Netlify, choose **Add new site** > **Import an existing project**, connect the GitHub repository, and select the `main` branch. Keep the build command empty; Netlify reads the publish directory (`.`) from the configuration. Deploy the site over HTTPS.
+
+After the first deploy, add the production site URL to the Supabase project's allowed redirect URLs before enabling account sign-up, confirmation, or password recovery. To deploy without linking Git, upload the site files in the Netlify manual deploy flow. A live deployment must be created from an authenticated Netlify account.
